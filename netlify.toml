@@ -1,11 +1,10 @@
 [build]
   command = "npm run build"
-  # Nitro netlify preset: static assets in dist/client, SSR in dist/server (see dist/nitro.json).
-  publish = "dist"
+  # @netlify/vite-plugin-tanstack-start: static assets + .netlify/v1/functions for SSR.
+  publish = "dist/client"
 
 [build.environment]
-  NODE_VERSION = "20"
-  NITRO_PRESET = "netlify"
+  NODE_VERSION = "22"
 
 [dev]
   command = "npm run dev"
