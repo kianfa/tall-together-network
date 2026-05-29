@@ -12,4 +12,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Lovable skips Nitro outside its sandbox; Netlify needs the SSR/serverless bundle.
+  nitro: { preset: "netlify" },
 });

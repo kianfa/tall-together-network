@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  # Nitro netlify preset: static assets in dist/client, SSR in dist/server (see dist/nitro.json).
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NITRO_PRESET = "netlify"
+
+[dev]
+  command = "npm run dev"
+  port = 8080
